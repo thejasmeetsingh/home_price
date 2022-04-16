@@ -1,5 +1,2 @@
 *pyc
 .idea/
-.env
-db.sqlite3
-price_data.csv
