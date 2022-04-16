@@ -6,7 +6,7 @@ from django.db import models
 
 
 class User(AbstractUser):
-    id = models.UUIDField(default=uuid.uuid4(), unique=True, primary_key=True, editable=False)
+    id = models.UUIDField(default=uuid.uuid4, unique=True, primary_key=True, editable=False)
     email = models.EmailField(_("email address"), unique=True)
     username = None
 
@@ -19,14 +19,15 @@ class User(AbstractUser):
 
 class HomePrice(models.Model):
     # Base Fields
-    id = models.UUIDField(default=uuid.uuid4(), unique=True, primary_key=True, editable=False)
+    id = models.UUIDField(default=uuid.uuid4, unique=True, primary_key=True, editable=False)
     created_on = models.DateTimeField(auto_now_add=True)
     modified_on = models.DateTimeField(auto_now=True)
 
     # CSV Fields
     date_time = models.DateTimeField()
-    price = models.DecimalField(max_digits=9, decimal_places=2)
+    price = models.DecimalField(max_digits=15, decimal_places=2)
     bedrooms = models.FloatField()
+    bathrooms = models.FloatField(default=0)
     sqft_living = models.PositiveIntegerField()
     sqft_lot = models.PositiveIntegerField()
     floors = models.FloatField()

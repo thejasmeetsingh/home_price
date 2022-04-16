@@ -4,4 +4,5 @@ djangorestframework==3.13.1
 python-dotenv==0.20.0
 pytz==2022.1
 sqlparse==0.4.2
+tablib==3.2.1
 tzdata==2022.1
