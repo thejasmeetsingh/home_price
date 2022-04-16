@@ -33,9 +33,9 @@
 					]
 				},
 				"url": {
-					"raw": "{{url}}/api/token/",
+					"raw": "{{server_url}}/api/token/",
 					"host": [
-						"{{url}}"
+						"{{server_url}}"
 					],
 					"path": [
 						"api",
@@ -186,6 +186,11 @@
 		{
 			"key": "url",
 			"value": "http://127.0.0.1:8000",
+			"type": "string"
+		},
+		{
+			"key": "server_url",
+			"value": "https://home-price-prediction-jasmeet.herokuapp.com",
 			"type": "string"
 		}
 	]
